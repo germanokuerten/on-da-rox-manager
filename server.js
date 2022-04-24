@@ -14,7 +14,7 @@
     X- Create github repo and commit
 
 2. Create all my Routes (For Full Crud Functionality)
-    - Create my Models, Views, Public folders
+    X- Create my Models, Views, Public folders
     - Create my model database with 5/11 drinks
     - Create all my EJS files
         - Home
