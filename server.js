@@ -14,7 +14,7 @@
     X- Create github repo and commit
 
 2. Create all my Routes (For Full Crud Functionality)
-    X- Create my Models, Views, Public folders
+    X- Create my Models, Views, Public (/static) folders
     - Create my model database with 5/11 drinks
     - Create all my EJS files
         - Home
@@ -26,7 +26,7 @@
         
 3. Link to DB
     - Create Schema with Mongoose
-    - Connect to Mongo DB 
+    X- Connect to Mongo DB 
         Collection: ondaroxdb
 
 3.1. Style pages
@@ -52,14 +52,36 @@ Ps. Commit consistantly
 require("dotenv").config()
 // web framework
 const express = require("express")
-// override request methods (Post - Put / Post - Delete)
+// Object Document Manager (Work with DB)
+const mongoose = require("mongoose")
+// Override request methods (Post - Put / Post - Delete)
 const methodOverride = require("method-override")
 const morgan = require("morgan") // used for logging
 
-// Config
-const PORT = process.env.PORT
 
-// Database
+//////////////////////////////
+// Setup Database Connection
+//////////////////////////////
+
+// loading db url
+const DATABASE_URL = process.env.DATABASE_URL
+
+// Establish connection
+mongoose.connect(DATABASE_URL)
+
+// Save the connection
+const cnx = mongoose.connection
+
+// Setup mongoose connection messages
+cnx
+.on("open", () => console.log("Mongo Connection is Open"))
+.on("close", () => console.log("Mongo Connection is Closed"))
+.on("error", (err) => console.log(err))
+
+
+//////////////////////////////
+// Schemas and Models
+//////////////////////////////
 
 
 //////////////////////////////
@@ -79,12 +101,12 @@ app.use(morgan("dev"))
 // Parse html form bodies into req.body
 app.use(express.urlencoded({extended: true}))
 // serve files statically
-app.use(express.static("public"))
+app.use(express.static("static"))
 
 
-////////////////
+//////////////////////////////
 // Routes
-////////////////
+//////////////////////////////
 
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
 
@@ -93,9 +115,12 @@ app.get("/", (req, res) => {
     res.send("home is working!")
 })
 
-////////////////
+//////////////////////////////
 // Server Listener
-////////////////
+//////////////////////////////
+
+// Config
+const PORT = process.env.PORT
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
