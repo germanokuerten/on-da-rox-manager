@@ -15,21 +15,25 @@
 
 2. Create all my Routes (For Full Crud Functionality)
     X- Create my Models, Views, Public (/static) folders
-    - Create my model database with 5/11 drinks
-    - Create all my EJS files
-        - Home
-        - Index 
+    - Create my model database with 5/11 drinks (/2 right now)
+    - Create all my Routes and EJS files
+        X- Home 
+            - (Create EJS file)
+        X- Index 
             + create my partials file
-        - Show
+        - Show Route
+            + Show.ejs
         - Edit
+            + Edit.ejs
         - New (create)
+            + Edit.ejs
         
 3. Link to DB
     X- Create Schema with Mongoose
     X- Connect to Mongo DB 
         Collection: ondaroxdb
     X- Test Schema with json files
-    - Test Mongo DB connection
+    X- Test Mongo DB connection
 
 3.1. Style pages
 
@@ -136,16 +140,17 @@ app.use(express.static("static"))
 
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
 
-// Test Route
+// Home Route
 app.get("/", (req, res) => {
     res.send("home is working!")
 })
 
+// Index Route
 app.get("/drink", async (req, res) => {
     // go get Drinks
     const drinks = await Drink.find({})
     // render index.ejs
-    res.render("index.ejs", {drinks})
+    res.render("index.ejs", {drink: drinks})
 })
 
 // Test Seed Route
@@ -169,10 +174,32 @@ app.get("/drink/seed", async (req, res) => {
             ingredient9: "",
             ingredient10: "",
             instructions: "In a blender add the berries, avocado, honey, and coconut water. Blend until smooth. If you need to stop and scrape the sides that will help too. It is delicious!",
+            drinkHistory: "Made by Germano Kuerten in 2022"},
+
+            {idDrink: "002",
+            alcoholic: "Yes",
+            drinkName: "Mano's smoothie 2",
+            drinkImage: "https://therecipecritic.com/wp-content/uploads/2016/03/blackberrylimesmoothie-650x975.jpg",
+            ingredient1: "Mixed berries",
+            ingredient2: "Avocado",
+            ingredient3: "Cane Sugar",
+            ingredient4: "Cononut Water",
+            ingredient5: "",
+            ingredient6: "",
+            ingredient7: "",
+            ingredient8: "",
+            ingredient9: "",
+            ingredient10: "",
+            instructions: "In a blender add the berries, avocado, honey, and coconut water. Blend until smooth. If you need to stop and scrape the sides that will help too. It is delicious!",
             drinkHistory: "Made by Germano Kuerten in 2022"}
     ]).catch((err) => res.send(err))
     // send the drinks as json
     res.json(drinks)
+})
+
+// New Route
+app.get("/drink/new", (req, res) => {
+    res.render("new.ejs")
 })
 
 //////////////////////////////

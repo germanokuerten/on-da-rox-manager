@@ -12,12 +12,25 @@
 <!-- Index Body -->
 
 <body>
-    <h1>On Da Rox Manager</h1>
+    <h1>On Da Rox Manager</h1><br>
 
     <ul>
-        <%  for (drink of drinks) { %> 
+        <%  for (let i = 0; i < drink.length; i++) { %> 
 
-            <li><%= drink.drinkName %> </li>
+            <h2><%= drink[i].drinkName %><h2>
+
+            <a href="/drink/<%= i %> "><img src="<%= drink[i].drinkImage %>" alt=""></a><br><br>
+
+            <!-- Delete Function Button -->
+            <div class="buttons"></div>
+            <form action="/drink/<%= i %>?_method=DELETE" method="post">
+                <input type="submit" value="Delete">
+            </form>
+
+            <!-- Edit Link Button -->
+
+            <a href="/pokemon/<%= i %>/edit"><button>Edit</button></a><br>
+            </div><br><br>
 
         <% } %> 
     </ul>
