@@ -25,9 +25,11 @@
         - New (create)
         
 3. Link to DB
-    - Create Schema with Mongoose
+    X- Create Schema with Mongoose
     X- Connect to Mongo DB 
         Collection: ondaroxdb
+    X- Test Schema with json files
+    - Test Mongo DB connection
 
 3.1. Style pages
 
@@ -83,6 +85,30 @@ cnx
 // Schemas and Models
 //////////////////////////////
 
+// Schema - the definition of our data type
+// Model - the object working with our data type
+
+const drinkSchema = new mongoose.Schema({
+    idDrink: String,
+    alcoholic: String,
+    drinkName: String,
+    drinkImage: String,
+    ingredient1: String,
+    ingredient2: String,
+    ingredient3: String,
+    ingredient4: String,
+    ingredient5: String,
+    ingredient6: String,
+    ingredient7: String,
+    ingredient8: String,
+    ingredient9: String,
+    ingredient10: String,
+    instructions: String,
+    drinkHistory: String
+}, {timestamps: true})
+
+const Drink = mongoose.model("Drink", drinkSchema)
+
 
 //////////////////////////////
 // Express Application
@@ -110,9 +136,43 @@ app.use(express.static("static"))
 
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
 
-//Test Route
+// Test Route
 app.get("/", (req, res) => {
     res.send("home is working!")
+})
+
+app.get("/drink", async (req, res) => {
+    // go get Drinks
+    const drinks = await Drink.find({})
+    // render index.ejs
+    res.render("index.ejs", {drinks})
+})
+
+// Test Seed Route
+app.get("/drink/seed", async (req, res) => {
+    // delete all existing drinks
+    await Drink.remove({}).catch((err) => res.send(err))
+    // add sample drinks
+    const drinks = await Drink.create([
+        {idDrink: "001",
+            alcoholic: "No",
+            drinkName: "Mano's smoothie",
+            drinkImage: "https://therecipecritic.com/wp-content/uploads/2021/04/berrysmoothiehero1-667x1000.jpg",
+            ingredient1: "Mixed berries",
+            ingredient2: "Avocado",
+            ingredient3: "Honey",
+            ingredient4: "Cononut Water",
+            ingredient5: "",
+            ingredient6: "",
+            ingredient7: "",
+            ingredient8: "",
+            ingredient9: "",
+            ingredient10: "",
+            instructions: "In a blender add the berries, avocado, honey, and coconut water. Blend until smooth. If you need to stop and scrape the sides that will help too. It is delicious!",
+            drinkHistory: "Made by Germano Kuerten in 2022"}
+    ]).catch((err) => res.send(err))
+    // send the drinks as json
+    res.json(drinks)
 })
 
 //////////////////////////////
