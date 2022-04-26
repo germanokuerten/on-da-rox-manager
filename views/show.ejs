@@ -13,9 +13,42 @@
 
 <body>
 
-    <a href="/drink/">Back to all Drinks</a> <br><br>
+    <a href="/drink/" style="text-decoration: none"><h1>On Da Rox Manager</h1></a><br>
+
+    <nav>
+        <a class="button" href="/drink/new" style="text-decoration: none">New Item</a> 
+    </nav><br><br>
+
+    <!-- Drink Data -->
     
-    <h1> <%= drink.drinkName %> </h1>
+    <h1><%= drink.drinkName %></h1>
+    <p>#<%= drink.idDrink %></p>
+    <p>alcoholic:&nbsp<%= drink.alcoholic %></p>
+
+    <img src="<%= drink.drinkImage %> " alt="Drink Image">
+
+    <h4>Ingredients: </h4> 
+    
+        <p><%= drink.ingredient1 %></p>
+        <p><%= drink.ingredient2 %></p>
+        <p><%= drink.ingredient3 %></p>
+        <p><%= drink.ingredient4 %></p>
+        <p><%= drink.ingredient5 %></p>
+        <p><%= drink.ingredient6 %></p>
+        <p><%= drink.ingredient7 %></p>
+        <p><%= drink.ingredient8 %></p>
+        <p><%= drink.ingredient9 %></p>
+        <p><%= drink.ingredient10 %></p>
+    
+    <h4>Instructions: </h4>
+
+    <p><%= drink.instructions %></p>
+
+    <h4>Drink History: </h4>
+
+    <p><%= drink.drinkHistory %></p>
+    
+    <a href="/drink/<%= drink.id %>/edit"><button>Edit</button></a><br>
 
 </body>
 </html>

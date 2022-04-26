@@ -16,20 +16,21 @@
 2. Create all my Routes (For Full Crud Functionality)
     X- Create my Models, Views, Public (/static) folders
     - Create my model database with 5/11 drinks (/2 right now)
-    - Create all my Routes and EJS files (INDUCES)
+    X- Create all my Routes and EJS files (INDUCES)
         X- Home 
-            - Create EJS file
+            X- Create EJS file
         X- Index 
             - Create my partials file
             X- Index.ejs
-        - New (create)
+        X- New (create)
             X- New.ejs
-        - Update
+        X- Update
         X- Create
-        - Edit
-            - Edit.ejs
+        X- Edit
+            X- Edit.ejs
         X- Show Route
-            - Show.ejs
+            X- Show.ejs
+        - Show all the correct data in all Routes
         
         
         
@@ -215,19 +216,24 @@ app.delete("/drink/:id", async (req, res) => {
 })
 
 // Update Route
+app.put("/drink/:id", async (req, res) => {
+    const updatedDrink = await Drink.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.redirect("/drink")
+})
 
 // Create
 app.post("/drink", async (req, res) => {
     await Drink.create(req.body).catch((err) => res.send(err))
-    res.redirect("/drink")
+    res.redirect("/drink/")
 })
 
 // Edit
 app.get("/drink/:id/edit", async (req, res) => {
     const editedDrink = await Drink.findById(req.params.id).catch((err) => res.send(err))
-    res.render("edit.ejs", {drink: editedDrink})
+    res.render("edit.ejs", {drink: editedDrink,
+                            index: req.params.id
+    })
 })
-
 
 // Show Route
 app.get("/drink/:id", async (req, res) => {
