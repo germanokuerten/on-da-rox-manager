@@ -16,18 +16,22 @@
 2. Create all my Routes (For Full Crud Functionality)
     X- Create my Models, Views, Public (/static) folders
     - Create my model database with 5/11 drinks (/2 right now)
-    - Create all my Routes and EJS files
+    - Create all my Routes and EJS files (INDUCES)
         X- Home 
             - Create EJS file
         X- Index 
             - Create my partials file
             X- Index.ejs
-        - Show Route
-            - Show.ejs
-        - Edit
-            - Edit.ejs
         - New (create)
             X- New.ejs
+        - Update
+        X- Create
+        - Edit
+            - Edit.ejs
+        X- Show Route
+            - Show.ejs
+        
+        
         
 3. Link to DB
     X- Create Schema with Mongoose
@@ -203,21 +207,33 @@ app.get("/drink/new", (req, res) => {
     res.render("new.ejs")
 })
 
+// Delete Route
+app.delete("/drink/:id", async (req, res) => {
+    const index = req.params.id
+    await Drink.findByIdAndDelete(index).catch((err) => console.log(err))
+    res.redirect("/drink")
+})
+
+// Update Route
+
+// Create
 app.post("/drink", async (req, res) => {
     await Drink.create(req.body).catch((err) => res.send(err))
     res.redirect("/drink")
 })
 
-// Delete Route
-app.delete("/drink/:id", async (req, res) => {
-    const index = req.params.id
-    await Drink.deleteOne(index).catch((err) => res.send(err))
-    res.redirect("/drink")
+// Edit
+app.get("/drink/:id/edit", async (req, res) => {
+    const editedDrink = await Drink.findById(req.params.id).catch((err) => res.send(err))
+    res.render("edit.ejs", {drink: editedDrink})
 })
 
-// Edit / Update Route
 
 // Show Route
+app.get("/drink/:id", async (req, res) => {
+    const showDrink = await Drink.findById(req.params.id).catch((err) => res.send(err))
+    res.render("show.ejs", {drink: showDrink})
+})
 
 //////////////////////////////
 // Server Listener
