@@ -18,15 +18,16 @@
     - Create my model database with 5/11 drinks (/2 right now)
     - Create all my Routes and EJS files
         X- Home 
-            - (Create EJS file)
+            - Create EJS file
         X- Index 
-            + create my partials file
+            - Create my partials file
+            X- Index.ejs
         - Show Route
-            + Show.ejs
+            - Show.ejs
         - Edit
-            + Edit.ejs
+            - Edit.ejs
         - New (create)
-            + Edit.ejs
+            X- New.ejs
         
 3. Link to DB
     X- Create Schema with Mongoose
@@ -153,7 +154,7 @@ app.get("/drink", async (req, res) => {
     res.render("index.ejs", {drink: drinks})
 })
 
-// Test Seed Route
+// Seed Route
 app.get("/drink/seed", async (req, res) => {
     // delete all existing drinks
     await Drink.remove({}).catch((err) => res.send(err))
@@ -201,6 +202,22 @@ app.get("/drink/seed", async (req, res) => {
 app.get("/drink/new", (req, res) => {
     res.render("new.ejs")
 })
+
+app.post("/drink", async (req, res) => {
+    await Drink.create(req.body).catch((err) => res.send(err))
+    res.redirect("/drink")
+})
+
+// Delete Route
+app.delete("/drink/:id", async (req, res) => {
+    const index = req.params.id
+    await Drink.deleteOne(index).catch((err) => res.send(err))
+    res.redirect("/drink")
+})
+
+// Edit / Update Route
+
+// Show Route
 
 //////////////////////////////
 // Server Listener

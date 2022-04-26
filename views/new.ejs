@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/app.js" defer></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>On Da Rox Manager</title>
+</head>
+
+<!-- New Body -->
+
+<body>
+
+    <a href="/drink/">Back to all Drinks</a> <br><br>
+
+    <div class="container">
+        <h1>Add new Drink</h1>
+        <form action="/drink" method="post">
+
+            <h4>Main info: </h4>
+
+            <input type="text" name="idDrink" placeholder="Drink Id" /> <br><br>
+            <input type="text" name="alcoholic" placeholder="Alcoholic" /> <br><br>
+
+            <input type="drinkName" name="drinkName" placeholder="Drink Name" /> <br><br>
+            <input type="url" name="drinkImage" placeholder="Drink Image Url" /> <br><br>
+
+            <h4>Ingredients: </h4>
+
+            <input type="text" name="ingredient1" placeholder="ingredient 1"/> <br><br>
+            <input type="text" name="ingredient2" placeholder="ingredient 2"/> <br><br>
+            <input type="text" name="ingredient3" placeholder="ingredient 3"/> <br><br>
+            <input type="text" name="ingredient4" placeholder="ingredient 4"/> <br><br>
+            <input type="text" name="ingredient5" placeholder="ingredient 5"/> <br><br>
+            <input type="text" name="ingredient6" placeholder="ingredient 6"/> <br><br>
+            <input type="text" name="ingredient7" placeholder="ingredient 7"/> <br><br>
+            <input type="text" name="ingredient8" placeholder="ingredient 8"/> <br><br>
+            <input type="text" name="ingredient9" placeholder="ingredient 9"/> <br><br>
+            <input type="text" name="ingredient10" placeholder="ingredient 10"/> <br><br>
+
+            <h4>Instructions: </h4>
+
+            <input type="text" name="instructions" placeholder="instructions"/> <br><br>
+
+            <h4>Drink History: </h4>
+
+            <input type="text" name="drinkHistory" placeholder="Drink History"/> <br><br>
+    
+            <br/>
+            <input type="submit" value="Create drink">
+        </form>
+    </div>   
+    
+</body>
+</html>
