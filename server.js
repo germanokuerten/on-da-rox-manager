@@ -42,13 +42,14 @@
     X- Test Mongo DB connection
 
 3.1. Style pages
-    -
+    - Create Home page
+    - Style all pages (like wireframe)
 
 3.2. Deploy on Heroku
-    -
+    - Deploy
 
 3.3. Develop a nice readme.md (inspired by OnDaRox readme)
-    -
+    - Do readme.md
 
 4. Extra (optionals)
     - Create Partials
