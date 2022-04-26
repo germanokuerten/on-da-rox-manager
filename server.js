@@ -9,7 +9,7 @@
 1. Set up all my configurations
     X- NPM init -y
     X- download all dependencies and sub dependencies
-        + set up .env and gitignore
+        X- set up .env and gitignore
     X- Set up all my dep and middleware
     X- Create github repo and commit
 
@@ -30,7 +30,7 @@
             X- Edit.ejs
         X- Show Route
             X- Show.ejs
-        - Show all the correct data in all Routes
+        X- Show all the correct data in all Routes
         
         
         
@@ -42,10 +42,16 @@
     X- Test Mongo DB connection
 
 3.1. Style pages
+    -
 
-3.2. Develop a nice readme.md (inspired by OnDaRox readme)
+3.2. Deploy on Heroku
+    -
+
+3.3. Develop a nice readme.md (inspired by OnDaRox readme)
+    -
 
 4. Extra (optionals)
+    - Create Partials
     - Create public folder for CSS framework
     - Authenthication login
     - API that can feed/seed On Da Rox user app
@@ -230,8 +236,9 @@ app.post("/drink", async (req, res) => {
 // Edit
 app.get("/drink/:id/edit", async (req, res) => {
     const editedDrink = await Drink.findById(req.params.id).catch((err) => res.send(err))
-    res.render("edit.ejs", {drink: editedDrink,
-                            index: req.params.id
+    res.render("edit.ejs", {
+        drink: editedDrink,
+        index: req.params.id
     })
 })
 
