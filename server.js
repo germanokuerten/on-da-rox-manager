@@ -1,6 +1,6 @@
-//////////////////////////
+//////////////////////////////
 // On Da Rox Manager App
-//////////////////////////
+//////////////////////////////
 
 /*
 
@@ -20,7 +20,7 @@
         X- Home 
             X- Create EJS file
         X- Index 
-            - Create my partials file
+            X- Create my partials file
             X- Index.ejs
         X- New (create)
             X- New.ejs
@@ -31,9 +31,7 @@
         X- Show Route
             X- Show.ejs
         X- Show all the correct data in all Routes
-        
-        
-        
+               
 3. Link to DB
     X- Create Schema with Mongoose
     X- Connect to Mongo DB 
@@ -42,8 +40,10 @@
     X- Test Mongo DB connection
 
 3.1. Style pages
-    - Create Home page
+    X- Create Home page
     - Style all pages (like wireframe)
+    - Try flexbox for index 3 per roll
+    X- Create 11 drinks (classics)
 
 3.2. Deploy on Heroku
     - Deploy
@@ -52,8 +52,8 @@
     - Do readme.md
 
 4. Extra (optionals)
-    - Create Partials
-    - Create public folder for CSS framework
+    X- Create Partials
+    X- Create public/static folder for CSS framework
     - Authenthication login
     - API that can feed/seed On Da Rox user app
 
@@ -144,7 +144,7 @@ app.use(morgan("dev"))
 // Parse html form bodies into req.body
 app.use(express.urlencoded({extended: true}))
 // serve files statically
-app.use(express.static("static"))
+app.use("/static", express.static("static"))
 
 
 //////////////////////////////
@@ -155,7 +155,7 @@ app.use(express.static("static"))
 
 // Home Route
 app.get("/", (req, res) => {
-    res.send("home is working!")
+    res.render("home.ejs")
 })
 
 // Index Route

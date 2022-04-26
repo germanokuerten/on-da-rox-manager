@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/static/app.js" defer></script>
-    <link rel="stylesheet" href="/static/styles.css">
-    <title>On Da Rox Manager</title>
-</head>
+
+    <%- include("partials/head.ejs") %>
 
 <!-- New Body -->
 
@@ -17,6 +11,8 @@
 
     <br><br>
 
+    <h3>New Item</h3>
+
     <div class="container">
         <form action="/drink" method="post">
 
@@ -25,7 +21,7 @@
             <input type="text" name="idDrink" placeholder="Drink Id" /> <br><br>
             <input type="text" name="alcoholic" placeholder="Alcoholic" /> <br><br>
 
-            <input type="drinkName" name="drinkName" placeholder="Drink Name" /> <br><br>
+            <input type="text" name="drinkName" placeholder="Drink Name" /> <br><br>
             <input type="url" name="drinkImage" placeholder="Drink Image Url" /> <br><br>
 
             <h4>Ingredients: </h4>

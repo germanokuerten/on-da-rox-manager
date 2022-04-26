@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/static/app.js" defer></script>
-    <link rel="stylesheet" href="/static/styles.css">
-    <title>On Da Rox Manager</title>
-</head>
+
+    <%- include("partials/head.ejs") %>
 
 <!-- Edit Body -->
 
@@ -40,7 +34,7 @@
 
     <!-- Alcoholic? -->
 
-    <p>alcoholic:&nbsp<input type="text" name="idDrink" value="<%= drink.alcoholic %>"/></p><br>
+    <p>alcoholic:&nbsp<input type="text" name="alcoholic" value="<%= drink.alcoholic %>"/></p><br>
 
     <!-- Drink Image -->
 
@@ -52,37 +46,37 @@
 
     <h4>Ingredients:</h4>
 
-    <p>ingredient1:&nbsp<input type="url" name="ingredient1" value="<%= drink.ingredient1 %>"/></p>
+    <p>ingredient1:&nbsp<input type="text" name="ingredient1" value="<%= drink.ingredient1 %>"/></p>
 
-    <p>ingredient2:&nbsp<input type="url" name="ingredient2" value="<%= drink.ingredient2 %>"/></p>
+    <p>ingredient2:&nbsp<input type="text" name="ingredient2" value="<%= drink.ingredient2 %>"/></p>
 
-    <p>ingredient3:&nbsp<input type="url" name="ingredient3" value="<%= drink.ingredient3 %>"/></p>
+    <p>ingredient3:&nbsp<input type="text" name="ingredient3" value="<%= drink.ingredient3 %>"/></p>
 
-    <p>ingredient4:&nbsp<input type="url" name="ingredient4" value="<%= drink.ingredient4 %>"/></p>
+    <p>ingredient4:&nbsp<input type="text" name="ingredient4" value="<%= drink.ingredient4 %>"/></p>
 
-    <p>ingredient5:&nbsp<input type="url" name="ingredient5" value="<%= drink.ingredient5 %>"/></p>
+    <p>ingredient5:&nbsp<input type="text" name="ingredient5" value="<%= drink.ingredient5 %>"/></p>
 
-    <p>ingredient6:&nbsp<input type="url" name="ingredient6" value="<%= drink.ingredient6 %>"/></p>
+    <p>ingredient6:&nbsp<input type="text" name="ingredient6" value="<%= drink.ingredient6 %>"/></p>
 
-    <p>ingredient7:&nbsp<input type="url" name="ingredient7" value="<%= drink.ingredient7 %>"/></p>
+    <p>ingredient7:&nbsp<input type="text" name="ingredient7" value="<%= drink.ingredient7 %>"/></p>
 
-    <p>ingredient8:&nbsp<input type="url" name="ingredient8" value="<%= drink.ingredient8 %>"/></p>
+    <p>ingredient8:&nbsp<input type="text" name="ingredient8" value="<%= drink.ingredient8 %>"/></p>
 
-    <p>ingredient9:&nbsp<input type="url" name="ingredient9" value="<%= drink.ingredient9 %>"/></p>
+    <p>ingredient9:&nbsp<input type="text" name="ingredient9" value="<%= drink.ingredient9 %>"/></p>
 
-    <p>ingredient10:&nbsp<input type="url" name="ingredient10" value="<%= drink.ingredient10 %>"/></p>
+    <p>ingredient10:&nbsp<input type="text" name="ingredient10" value="<%= drink.ingredient10 %>"/></p>
 
     <!-- Drink Instructions -->
 
     <h4>Instructions: </h4>
 
-    <p>instructions:&nbsp<input id="textboxid" type="url" name="instructions" value="<%= drink.instructions %>"/></p>
+    <p>instructions:&nbsp<input id="textboxid" type="text" name="instructions" value="<%= drink.instructions %>"/></p>
 
     <!-- Drink History -->
 
     <h4>Drink History: </h4>
 
-    <p>drink history:&nbsp<input id="textboxid" type="url" name="drinkHistory" value="<%= drink.drinkHistory %>"/></p>
+    <p>drink history:&nbsp<input id="textboxid" type="text" name="drinkHistory" value="<%= drink.drinkHistory %>"/></p>
 
     <br><br>
     <input type="submit" value="Update <%= drink.drinkName %>">
