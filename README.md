@@ -20,6 +20,28 @@ On Da Rox - Manager is a full CRUD app that allows you to create, read, edit and
 - Google Fonts
 - Adobe Photoshop
 
+## Wireframes
+
+Home            | 
+:-------------------------:|
+![](./images/Ondarox-Manager-Home)  |
+
+Index            | 
+:-------------------------:|
+![](./images/Ondarox-Manager-Home)  |
+
+Show            | 
+:-------------------------:|
+![](./images/Ondarox-Manager-Home)  |
+
+Edit            | 
+:-------------------------:|
+![](./images/Ondarox-Manager-Home)  |
+
+Create            | 
+:-------------------------:|
+![](./images/Ondarox-Manager-Home)  |
+
 ## ERD
 
 ![](./images/Ondarox-Manager-ERD)  | 
