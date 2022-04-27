@@ -29,7 +29,7 @@
         } */
     </style>
 
-    <h1>On Da Rox Manager</h1><br>
+    <h1 class="welcome2">Ondarox Manager</h1><br>
 
     <nav>
         <a href="/drink/new" style="text-decoration: none"><button id="newitem">New Item</button></a> 
@@ -51,12 +51,6 @@
 
             <a href="/drink/<%= drink[i].id %>/edit"><button id="edit">Edit</button></a><br>
 
-            <!-- Delete Function Button -->
-
-            <form action="/drink/<%= drink[i].id %>?_method=DELETE" method="post">
-                <input id="delete" type="submit" value="Delete">
-            </form>
-
             </div>
             <br>
         </div>
@@ -65,7 +59,7 @@
     
     </div>
     <hr>
-    <p class="footer">On Da Rox - Cocktail Recipe App 2022</p>
+    <p class="footer">ondarox.co | cocktail recipe app</p>
     
 
 </body>

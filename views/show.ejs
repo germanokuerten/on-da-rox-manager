@@ -11,7 +11,7 @@
 
     <nav>
         <a class="button" href="/drink/new" style="text-decoration: none">New Item</a> 
-    </nav><hr><br>
+    </nav><hr>
 
     <!-- Drink Data -->
     
@@ -21,27 +21,31 @@
 
     <img src="<%= drink.drinkImage %> " alt="Drink Image">
 
+    
     <h4>Ingredients: </h4> 
-    
-        <p><%= drink.ingredient1 %></p>
-        <p><%= drink.ingredient2 %></p>
-        <p><%= drink.ingredient3 %></p>
-        <p><%= drink.ingredient4 %></p>
-        <p><%= drink.ingredient5 %></p>
-        <p><%= drink.ingredient6 %></p>
-        <p><%= drink.ingredient7 %></p>
-        <p><%= drink.ingredient8 %></p>
-        <p><%= drink.ingredient9 %></p>
-        <p><%= drink.ingredient10 %></p>
-    
+    <div id="ingredients-show">
+        <p class="ingredients-show"><%= drink.ingredient1 %></p>
+        <p class="ingredients-show"><%= drink.ingredient2 %></p>
+        <p class="ingredients-show"><%= drink.ingredient3 %></p>
+        <p class="ingredients-show"><%= drink.ingredient4 %></p>
+        <p class="ingredients-show"><%= drink.ingredient5 %></p>
+        <p class="ingredients-show"><%= drink.ingredient6 %></p>
+        <p class="ingredients-show"><%= drink.ingredient7 %></p>
+        <p class="ingredients-show"><%= drink.ingredient8 %></p>
+        <p class="ingredients-show"><%= drink.ingredient9 %></p>
+        <p class="ingredients-show"><%= drink.ingredient10 %></p>
+    </div>
+
     <h4>Instructions: </h4>
 
+    <div class="instructions">
     <p><%= drink.instructions %></p>
-
+    </div>
     <h4>Drink History: </h4>
 
+    <div class="drink-history">
     <p><%= drink.drinkHistory %></p>
-    
+    </div>  
     <a href="/drink/<%= drink.id %>/edit"><button>Edit</button></a><br>
 
     <hr>
