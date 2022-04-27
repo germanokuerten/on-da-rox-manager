@@ -10,11 +10,11 @@
     <a href="/drink/" style="text-decoration: none"><h1>On Da Rox Manager</h1></a><br>
 
     <nav>
-        <a class="button" href="/drink/new" style="text-decoration: none">New Item</a> 
+        <a href="/drink/new" style="text-decoration: none"><button id="newitem">New Item</button></a> 
     </nav><br>
 
     <form action="/drink/<%= drink.id %>?_method=DELETE" method="post">
-        <input type="submit" value="Delete">
+        <input id="delete" type="submit" value="Delete">
     </form>
     <hr><br>
 

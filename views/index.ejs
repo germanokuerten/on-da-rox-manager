@@ -14,39 +14,53 @@
         h4 {
             margin: 0 -10px 10px;
         }
+        /* .flex-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .flex-box {
+            width: 200px;
+            height: 200px;
+
+        } */
     </style>
 
     <h1>On Da Rox Manager</h1><br>
 
     <nav>
-        <a class="button" href="/drink/new" style="text-decoration: none">New Item</a> 
-    </nav><br><br>
-
+        <a href="/drink/new" style="text-decoration: none"><button id="newitem">New Item</button></a> 
+    </nav><hr><br>
+    
     <ul>
-
+        
         <%  for (let i = 0; i < drink.length; i++) { %> 
    
             <h4><%= drink[i].drinkName %><h4> <h6>#<%= drink[i].idDrink %></h6>
 
             <a href="/drink/<%= drink[i].id %> "><img src="<%= drink[i].drinkImage %>" alt=""></a><br>
             
-            <div class="buttons"></div>
+            <div class="buttons">
 
             <!-- Edit Link Button -->
 
-            <a href="/drink/<%= drink[i].id %>/edit"><button>Edit</button></a><br>
+            <a href="/drink/<%= drink[i].id %>/edit"><button id="edit">Edit</button></a><br>
 
             <!-- Delete Function Button -->
 
             <form action="/drink/<%= drink[i].id %>?_method=DELETE" method="post">
-                <input type="submit" value="Delete">
+                <input id="delete" type="submit" value="Delete">
             </form>
 
-            </div><br>
+            </div>
+            <br>
 
         <% } %> 
-        
-    </ul>
     
+    </ul>
+   
 </body>
 </html>
