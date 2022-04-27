@@ -75,3 +75,26 @@ Create            |
 Create Bottom          | 
 :-------------------------:|
 ![](./images/screenshots/Ondarox-Manager-UI-Create-2)  |
+
+## Functionality
+
+This application has full CRUD functionality and follows an MVC design pattern.
+
+## Future Enhancements
+
+- User log in
+- User Authorization
+- Navigator with search feature
+- An API that will populate On Da Rox user app
+
+**Summary**
+
+| Field | Detail |
+|-------|--------|
+| App Name | On Da Rox - Manager |
+| Description | On Da Rox - Manager is the API database UI manager for cocktail recipe app ondarox.co |
+| Developers | Germano Kuerten |
+| Live Website | https://ondarox-manager.herokuapp.com/ |
+| Repo | https://github.com/germanokuerten/on-da-rox-manager |
+
+>"Simplicity Is the key to brilliance." - Bruce Lee
