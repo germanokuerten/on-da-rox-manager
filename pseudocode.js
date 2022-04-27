@@ -46,15 +46,17 @@
     X- Create 11 drinks (classics)
 
 3.2. Deploy on Heroku
-    - Deploy
+    X- Deploy
+        - Update
 
 3.3. Develop a nice readme.md (inspired by OnDaRox readme)
     - Do readme.md
 
 4. Extra (optionals)
+    - Create controllers, models etc to clean up server.js
     X- Create Partials
     X- Create public/static folder for CSS framework
-    - Create a navegator
+    - Create a navigator
     - Authenthication login
     - API that can feed/seed On Da Rox user app
 
