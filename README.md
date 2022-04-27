@@ -76,7 +76,7 @@ Create Bottom          |
 :-------------------------:|
 ![](./images/screenshots/Ondarox-Manager-UI-Create-2)  |
 
-## Functionality
+## Functionality and Design
 
 This application has full CRUD functionality and follows an MVC design pattern.
 
@@ -96,5 +96,7 @@ This application has full CRUD functionality and follows an MVC design pattern.
 | Developers | Germano Kuerten |
 | Live Website | https://ondarox-manager.herokuapp.com/ |
 | Repo | https://github.com/germanokuerten/on-da-rox-manager |
+
+Obs: This app was created for celebratory purposes. Drink moderately and responsibly. And never Drink and Drive. Your life, and other peoples lives are precious.
 
 >"Simplicity Is the key to brilliance." - Bruce Lee
