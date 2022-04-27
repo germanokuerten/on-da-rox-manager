@@ -47,12 +47,13 @@
 
 3.2. Deploy on Heroku
     X- Deploy
-        - Update
+        X- Update
 
 3.3. Develop a nice readme.md (inspired by OnDaRox readme)
     - Do readme.md
 
 4. Extra (optionals)
+    - Improve Show page
     - Create controllers, models etc to clean up server.js
     X- Create Partials
     X- Create public/static folder for CSS framework
