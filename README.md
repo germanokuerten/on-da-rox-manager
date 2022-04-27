@@ -42,6 +42,6 @@ Create            |
 :-------------------------:|
 ![](./images/Ondarox-Manager-Create)  |
 
-## ERD
-
+ERD            | 
+:-------------------------:|
 ![](./images/Ondarox-Manager-ERD)  | 
