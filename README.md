@@ -22,6 +22,4 @@ On Da Rox - Manager is a full CRUD app that allows you to create, read, edit and
 
 ## ERD
 
- 
-:-------------------------:|
 ![](./images/Ondarox-Manager-ERD)  | 
