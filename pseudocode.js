@@ -41,8 +41,8 @@
 
 3.1. Style pages
     X- Create Home page
-    - Style all pages (like wireframe)
-    - Try flexbox for index 3 per roll
+    X- Style all pages (like wireframe)
+    X- Try flexbox for index 3 per roll
     X- Create 11 drinks (classics)
 
 3.2. Deploy on Heroku
@@ -53,7 +53,7 @@
     - Do readme.md
 
 4. Extra (optionals)
-    - Improve Show page
+    X- Improve Show page
     - Create controllers, models etc to clean up server.js
     X- Create Partials
     X- Create public/static folder for CSS framework
