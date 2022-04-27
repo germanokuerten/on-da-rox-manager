@@ -28,19 +28,19 @@ Home            |
 
 Index            | 
 :-------------------------:|
-![](./images/Ondarox-Manager-Home)  |
+![](./images/Ondarox-Manager-Index)  |
 
 Show            | 
 :-------------------------:|
-![](./images/Ondarox-Manager-Home)  |
+![](./images/Ondarox-Manager-Show)  |
 
 Edit            | 
 :-------------------------:|
-![](./images/Ondarox-Manager-Home)  |
+![](./images/Ondarox-Manager-Edit)  |
 
 Create            | 
 :-------------------------:|
-![](./images/Ondarox-Manager-Home)  |
+![](./images/Ondarox-Manager-Create)  |
 
 ## ERD
 
