@@ -45,3 +45,33 @@ Create            |
 ERD            | 
 :-------------------------:|
 ![](./images/Ondarox-Manager-ERD)  | 
+
+## UI Screenshots
+
+Home            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Home)  |
+
+Index            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Index)  |
+
+Show            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Show)  |
+
+Edit            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Edit)  |
+
+Edit Bottom            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Edit-2)  |
+
+Create            | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Create)  |
+
+Create Bottom          | 
+:-------------------------:|
+![](./images/screenshots/Ondarox-Manager-UI-Create-2)  |
