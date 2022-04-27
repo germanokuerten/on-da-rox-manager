@@ -35,10 +35,12 @@
         <a href="/drink/new" style="text-decoration: none"><button id="newitem">New Item</button></a> 
     </nav><hr><br>
     
-    <ul>
+    
+    <div class="drink-container">
         
         <%  for (let i = 0; i < drink.length; i++) { %> 
    
+        <div class="card">
             <h4><%= drink[i].drinkName %><h4> <h6>#<%= drink[i].idDrink %></h6>
 
             <a href="/drink/<%= drink[i].id %> "><img src="<%= drink[i].drinkImage %>" alt=""></a><br>
@@ -57,10 +59,12 @@
 
             </div>
             <br>
+        </div>
 
         <% } %> 
     
-    </ul>
-   
+    </div>
+    
+
 </body>
 </html>
